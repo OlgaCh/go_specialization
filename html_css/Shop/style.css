@@ -1,0 +1,219 @@
+                body {
+                    background-color: #f8f8f8;
+                }
+                
+                h1 {
+                    text-align: center;
+                }
+                
+                form {
+                    margin: 0 auto;
+                    width: 500px;
+                }
+                
+                input {
+                    height: 30px;
+                    width: 500 px;
+                }
+                
+                #email:focus {
+                    color: #3d0d7a;
+                    background-color: #f1edf5;
+                }
+                
+                #name,
+                #question:focus {
+                    text-transform: capitalize;
+                }
+                
+                input::placeholder {
+                    color: blue;
+                    font-family: monospace;
+                    font-size: medium;
+                }
+                
+                .menu {
+                    list-style-type: none;
+                }
+                
+                .menu li a {
+                    text-decoration: none;
+                    color: #515863;
+                }
+                
+                .menu li a:hover {
+                    text-decoration: none;
+                    color: #1755d1;
+                }
+                
+                table tr td {
+                    text-align: center;
+                }
+                
+                .good a {
+                    text-decoration: none;
+                    color: #515863;
+                    font-size: 20px;
+                    font-weight: 200;
+                    display: block;
+                }
+                
+                .description_heading {
+                    color: black;
+                    text-align: center;
+                    font-weight: 400;
+                }
+                
+                .short_description {
+                    color: #707070;
+                    font-size: 14px;
+                    font-style: italic;
+                    line-height: 16px;
+                    text-align: center;
+                }
+                
+                .short_description:first-letter,
+                .detailed_description:first-letter {
+                    font-style: italic;
+                    font-size: 30px;
+                    color: #6e7bb5;
+                }
+                
+                .detailed_description {
+                    color: #484343;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    text-align: left;
+                }
+                
+                .intro {
+                    color: #707070;
+                    font-style: italic;
+                    line-height: 24px;
+                    text-align: center;
+                }
+                
+                ul[class="detailed_description"] {
+                    list-style-image: url(img/vaccine.png);
+                    font-style: oblique;
+                    color: #36373b;
+                }
+                
+                .price {
+                    text-align: center;
+                }
+                
+                .image {
+                    display: block;
+                    margin: 0 auto;
+                    outline: 3px solid #6e7bb5;
+                }
+                
+                .image:hover {
+                    outline: none;
+                }
+                
+                .question {
+                    height: 100px;
+                    width: 500 px;
+                }
+                
+                .button {
+                    margin-left: 100px;
+                    display: inline-block;
+                }
+                
+                .package {
+                    width: 100%;
+                    border: 2px solid #5f6163;
+                    border-collapse: collapse;
+                }
+                
+                .package tr {
+                    border: 2px solid #5f6163;
+                }
+                
+                .package tr:nth-child(1) {
+                    line-height: 100px;
+                }
+                
+                .package tr>td,
+                th {
+                    border: 2px solid #5f6163;
+                }
+                
+                td {
+                    text-align: center;
+                    vertical-align: middle;
+                }
+                
+                .container {
+                    position: relative;
+                    width: 1600px;
+                    margin: 0 auto;
+                }
+                
+                .header {
+                    height: 150px;
+                    background-image: url("img/header.jpeg");
+                }
+                
+                .logo {
+                    float: left;
+                    margin-top: 30px;
+                    margin-left: 100px;
+                    width: 50%;
+                }
+                
+                .menu_container {
+                    margin-top: 50px;
+                    margin-right: 100px;
+                    text-align: center;
+                    float: right;
+                }
+                
+                .menu li {
+                    font-size: large;
+                    font-style: italic;
+                    height: 30px;
+                    width: 100px;
+                    padding: 10px;
+                    display: inline;
+                }
+                
+                .footer {
+                    height: 50px;
+                    background-color: rgb(219, 243, 250);
+                }
+                
+                .footer_text {
+                    margin-top: 15px;
+                    margin-right: 20px;
+                    float: right;
+                }
+                
+                .vaccine_image,
+                vaccine_short_details {
+                    float: left;
+                }
+                
+                .buy_button {
+                    position: absolute;
+                    margin-top: 20px;
+                    margin-left: 200px;
+                }
+                
+                .buy_button:hover {
+                    color: #6e7bb5;
+                    font-weight: 800;
+                }
+                
+                .buy_button:active {
+                    color: salmon;
+                }
+                
+                .good {
+                    display: inline-block;
+                    position: relative;
+                }

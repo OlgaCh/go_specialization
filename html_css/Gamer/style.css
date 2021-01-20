@@ -1,0 +1,399 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html {
+        overflow-x: hidden;
+    }
+    
+    .container {
+        width: 1920px;
+        margin: 0 auto;
+    }
+    
+    .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    .intro {
+        background-image: url("img/intro.png");
+        background-size: cover;
+        width: 1920px;
+        height: 725px;
+        position: relative;
+    }
+    
+    .header {
+        margin-top: 13px;
+        height: 83px;
+        background-color: rgba(00, 00, 00, 0.5);
+        position: relative;
+    }
+    
+    .logo {
+        position: absolute;
+        margin-top: 19px;
+        margin-left: 400px;
+    }
+    
+    .logo-text-1 {
+        width: 169px;
+        height: 29px;
+        color: #ffffff;
+        font-family: Poppins;
+        font-size: 36px;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 22.36px;
+        text-align: left;
+        letter-spacing: 0.77px;
+    }
+    
+    .logo-text-2 {
+        width: 171px;
+        height: 12px;
+        color: #ffffff;
+        font-family: Poppins;
+        font-size: 15px;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 22.36px;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 32px;
+    }
+    
+    .header-contacts {
+        position: absolute;
+        margin-top: 28px;
+        margin-left: 802px;
+    }
+    
+    .header-contacts img {
+        padding-right: 10px;
+    }
+    
+    .header-contacts-phone {
+        display: inline-block;
+        width: 150px;
+        height: 25px;
+        color: #ffffff;
+        font-family: "Roboto Condensed";
+        font-size: 17px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 22.36px;
+        text-align: left;
+        letter-spacing: 0.36px;
+        margin-right: 20px;
+    }
+    
+    .header-contacts-email {
+        display: inline-block;
+        width: 200px;
+        height: 20px;
+        color: #ffffff;
+        font-family: "Roboto Condensed";
+        font-size: 17px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 22.36px;
+        text-align: left;
+        letter-spacing: 0.36px;
+    }
+    
+    .header-search {
+        position: absolute;
+        margin-top: 23px;
+        margin-left: 1300px;
+        height: 38px;
+        width: 208px;
+        display: flex;
+    }
+    
+    .header-search-input {
+        width: 150px;
+        height: 38px;
+        margin: 0;
+        border: 1px solid #ffffff;
+        display: inline-block;
+        background: transparent;
+    }
+    
+    .header-search-input::placeholder {
+        text-align: left;
+        padding: 20px;
+        color: #ffffff;
+        font-family: "Roboto Condensed";
+        font-size: 17px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 0.36px;
+    }
+    
+    .header-search-button {
+        width: 50px;
+        margin: 0;
+        height: 39px;
+        border: 1px solid #ffffff;
+        display: inline-block;
+        background: transparent;
+    }
+    
+    .header-search-button:hover {
+        border: 1px solid #080808;
+    }
+    
+    .menu {
+        margin-top: 0px;
+        height: 78px;
+    }
+    
+    .menu-list {
+        position: absolute;
+        display: inline-block;
+        list-style-type: none;
+        margin-left: 703px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    
+    .menu-list-item {
+        display: inline-block;
+        margin-right: 20px;
+        font-weight: bold;
+    }
+    
+    .menu-list-item a {
+        text-decoration: none;
+        color: #000000;
+        font-family: "Roboto Condensed";
+        font-size: 17px;
+        font-weight: 700;
+        font-style: normal;
+        line-height: 22.36px;
+        text-align: center;
+        letter-spacing: 0.36px;
+    }
+    
+    .menu-list-item a:hover {
+        color: darkgrey;
+    }
+    
+    .menu-list-item a:active {
+        color: lightgrey;
+    }
+    
+    .menu-list-item-active a {
+        color: #ffffff;
+    }
+    
+    .active-menu-underline {
+        position: absolute;
+        margin-left: 700px;
+        margin-top: 75px;
+    }
+    
+    .menu hr {
+        position: absolute;
+        width: 1923px;
+        height: 1px;
+        border: 1px solid #ffffff;
+        margin-top: 75px;
+    }
+    
+    .intro-text {
+        margin-top: 136px;
+        color: #ffffff;
+        font-family: "Roboto Condensed";
+        font-size: 18px;
+        font-weight: 700;
+        font-style: normal;
+        line-height: 48px;
+        text-align: center;
+        letter-spacing: 0.18px;
+    }
+    
+    .intro-text-underline {
+        margin-top: 0px;
+        margin-left: 917px;
+    }
+    
+    .intro-title {
+        margin-top: 76px;
+        color: #ffffff;
+        font-family: Poppins;
+        font-size: 60px;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 48px;
+        text-align: center;
+        letter-spacing: 0.6px;
+    }
+    
+    .intro-social {
+        margin-top: 50px;
+        margin-left: 850px;
+    }
+    
+    .intro-social-link {
+        width: 40px;
+        height: 40px;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 10px;
+    }
+    
+    .intro-social-facebook {
+        width: 9px;
+        height: 15px;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+    
+    .intro-social-twitter {
+        width: 15px;
+        height: 13px;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+    
+    .intro-social-rss {
+        width: 14px;
+        height: 14px;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+    
+    .intro-social-vk {
+        width: 19px;
+        height: 11px;
+        margin-top: 15px;
+        margin-left: 12px;
+    }
+    
+    .about {
+        display: inline-block;
+        position: relative;
+        margin-top: 81px;
+        margin-bottom: 81px;
+    }
+    
+    .about-text {
+        display: inline-block;
+        margin-left: 477px;
+        margin-right: 33px;
+        height: 266px;
+    }
+    
+    .about-text h1 {
+        color: #f44336;
+        font-family: Poppins;
+        font-size: 36px;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: normal;
+        text-align: left;
+        margin-top: 0px;
+    }
+    
+    .about-text p {
+        /* Style for "Nemo enim" */
+        width: 398px;
+        height: 203px;
+        color: #999999;
+        font-family: "Roboto Condensed";
+        font-size: 12px;
+        font-weight: 300;
+        font-style: normal;
+        line-height: 24px;
+        text-align: left;
+        letter-spacing: 0.12px;
+        margin-top: 25px;
+    }
+    
+    .about-image {
+        display: inline-block;
+        width: 540px;
+        height: 338px;
+    }
+    
+    .services {
+        display: inline-block;
+        position: relative;
+        width: 1923px;
+        height: 900px;
+        background-color: #f7f7f7;
+    }
+    
+    .services-grid {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+    
+    .services-grid td {
+        padding: 25px;
+    }
+    
+    .services-title {
+        margin-top: 92px;
+        margin-bottom: 68px;
+        color: #f44336;
+        font-family: Poppins;
+        font-size: 36px;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 48px;
+        text-align: center;
+    }
+    
+    .services-text h3 {
+        color: #000000;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 24px;
+        letter-spacing: 0.16px;
+        margin-bottom: 18px;
+    }
+    
+    .services-text-active h3 {
+        color: #f44336;
+    }
+    
+    .right {
+        text-align: right;
+    }
+    
+    .left {
+        text-align: left;
+    }
+    
+    .services-image {
+        width: 102px;
+        height: 102px;
+        border: 1px solid #acacac;
+        background-color: #e1e1e1;
+        border-radius: 50%;
+        padding: 20px;
+    }
+    
+    .services-image img {
+        margin-left: 40px;
+    }
+    
+    .services-image-active {
+        background-color: #f44336;
+    }
+    
+    .services-empty-row {
+        height: 73px;
+    }
