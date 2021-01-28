@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>Lesson 1 - Task 2</title>
+</head>
+
+<body>
+    <script>
+        // Реализовать функционал корзины и метод подсчета ее стоимости countBasketPrice
+        "use strict";
+
+        function countBasketPrice(basket) {
+            return basket.reduce((total, unit) => total + unit.quantity * unit.price, 0);
+        }
+
+        let basket = []
+        basket.push({
+            good: "Linking Park. Aug 2021 Show",
+            quantity: 5,
+            price: 1500
+        });
+        basket.push({
+            good: "Skillet. 2021 in Moscow",
+            quantity: 3,
+            price: 999
+        });
+        basket.push({
+            good: "АнимациЯ. Возвращение в Воронеж",
+            quantity: 2,
+            price: 750
+        });
+
+        let basketPrice = countBasketPrice(basket);
+        console.log(`Стоимость корзины: ${basketPrice} рублей.`);
+        console.log("В корзине:");
+        for (let i = 0; i < basket.length; console.log(`${basket[i].good} - ${basket[i++].quantity} шт`));
+    </script>
+</body>
+
+</html>
