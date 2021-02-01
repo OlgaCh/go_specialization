@@ -44,7 +44,7 @@
 
         console.log(`Стоимость корзины: ${basketPrice} рублей.`);
         console.log("В корзине:");
-        for (let i = 0; i < basket.items.length; console.log(`${basket.items[i].name} - ${basket.items[i++].quantity} шт`));
+        basket.items.forEach(item => console.log(`${item.name} - ${item.quantity} шт`));
     </script>
 </body>
 

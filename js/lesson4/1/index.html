@@ -17,22 +17,34 @@
 
         class ParsedNumber {
             constructor(n) {
-                if (parseInt(n) > 999) {
-                    this.hundreds = this.dozens = this.units = null;
-                    console.log(`Число ${n} больше 999.`);
-                } else {
-                    this.hundreds = n.length == 3 ? n.charAt(0) : null;
-                    this.dozens = n.length >= 2 ? n.charAt(n.length-2) : null;
-                    this.units = n.charAt(n.length-1);
+                if (isNaN(n) | n > 999 | n < 0) {
+                    this.hundreds = this.dozens = this.units = 0;
+                    console.log(`Число ${n} не от 0 до 999.`);
+                }
+                else {
+                    this.hundreds = n / 100 >> 0;
+                    this.dozens = (n / 10 >> 0) % 10;
+                    this.units = n % 10;
                 }
             }
 
             log() {
-                console.log(`Преобразованное число: {"единицы": ${this.units}, "десятки": ${this.dozens}, "сотни": ${this.hundreds}}`);
+                let parts = ["сотни", "десятки", "единицы"];
+
+                let mappedParts = [this.hundreds, this.dozens, this.units].map((value,idx) => {
+                    return value != 0 ? `"${parts[idx]}": ${value} \n` : "";
+                });
+
+                let mappedNumber = mappedParts.join("");
+
+                if (mappedNumber.length){
+                    console.log("Преобразованное число\n");
+                    console.log(mappedNumber);
+                }
             }
         }
 
-        let a = Number(prompt("Введите число для преобразования")).toString();
+        let a = Math.floor(prompt("Введите число для преобразования"));
 
         let parsedNumber = new ParsedNumber(a);
         parsedNumber.log();
