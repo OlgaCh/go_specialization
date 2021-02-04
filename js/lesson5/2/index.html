@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>Lesson 5 - Task 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>Корзина</h1>
+        </div>
+    <div class="cart">
+        <div class="table">
+            <div class="layout-inline row th">
+                <div class="col col-pro">Продукт</div>
+                <div class="col col-price align-center ">Цена</div>
+                <div class="col col-qty align-center">Количество</div>
+                <div class="col"></div>
+            </div>
+
+           <div class="tf">
+               <div class="row layout-inline">
+                   <div class="col"> <p>Итого</p> </div>
+                   <div class="col total-price"></div>
+               </div>
+           </div>
+        </div>
+        <a href="#" class="btn btn-update" onclick="updateBasket()">Обновить</a>
+    </div>
+    </div>
+    <script>
+        /*
+             Сделать генерацию корзины динамической: верстка корзины не должна находиться в HTML-структуре.
+             Там должен быть только div, в который будет вставляться корзина, сгенерированная на базе JS
+        */
+        "use strict";
+
+        class Product {
+            constructor (img, name, price){
+                this.img = img;
+                this.name = name;
+                this.price = price;
+            }
+        }
+
+        class BasketItem extends Product {
+            constructor (img, name, price, quantity){
+                super(img, name, price);
+                this.quantity = quantity;
+            }
+        }
+
+        class Basket {
+            constructor (items) {
+                this.items = items;
+            }
+            countPrice() {
+                return this.items.reduce((total, unit) => total + unit.quantity * unit.price, 0);
+            }
+        }
+
+        function formatBasketItem(basketItem){
+            return `<div class="col col-pro layout-inline"><img src="${basketItem.img}" alt="${basketItem.name}"/>
+                    <p>${basketItem.name}</p></div>
+                   <div class="col col-price col-numeric align-center "><p>${basketItem.price}</p></div>
+                   <div class="col col-qty layout-inline"><p>${basketItem.quantity}</p></div>
+                   <div class="col col-total col-numeric"><p>${basketItem.quantity*basketItem.price}</p></div>`
+        }
+
+        function addToHTML(basketItem){
+            let content = formatBasketItem(basketItem);
+            const productDiv = document.createElement("div");
+            productDiv.className = "layout-inline row product-row";
+            productDiv.innerHTML = content;
+
+            let footerDiv = document.querySelector('.tf');
+            footerDiv.before(productDiv);
+           }
+
+        function updateBasket(){
+           let bi_1 = new BasketItem("img/linkin_park.jpeg", "Linkin Park. Aug 2021 Show", 1500, 5);
+            let bi_2 = new BasketItem("img/skillet.jpeg", "Skillet. 2021 in Moscow", 999, 3);
+            let bi_3 = new BasketItem("img/анимация.png", "АнимациЯ. Возвращение в Воронеж", 750, 2);
+
+            let basket = new Basket([bi_1, bi_2, bi_3]);
+            let basketPrice = basket.countPrice();
+
+            try {
+                document.querySelectorAll(".product-row").forEach(el => el.remove());
+            } catch (TypeError) {
+                console.log("No products in the basket.");
+            }
+
+            basket.items.forEach(item => addToHTML(item));
+
+            let totalEl = document.querySelector('.total-price');
+            totalEl.innerHTML = `<p>${basketPrice}</p>`;
+        }
+    </script>
+</body>
+
+</html>
