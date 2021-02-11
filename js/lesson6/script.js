@@ -61,7 +61,14 @@ class Basket {
         let product = productDict[itemName];
         let toAdd = true;
 
-        this.items.forEach(function(item) {if (item.name === product.name) {item.quantity++; toAdd = false;}})
+        this.items.forEach(
+            function(item) {
+                if (item.name === product.name) {
+                    item.quantity++;
+                    toAdd = false;
+                }
+            }
+         )
 
         if (toAdd === true) {
             let bi = new BasketItem(product.img, product.name, product.price, 1);
