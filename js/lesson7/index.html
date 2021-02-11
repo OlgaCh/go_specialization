@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>Lesson 7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>Билеты</h1>
+        </div>
+        <div class="events layout-inline"></div>
+        <div class="cart">
+            <div class="table">
+                <div class="layout-inline row th">
+                    <div class="col col-pro">Событие</div>
+                    <div class="col col-price align-center ">Цена</div>
+                    <div class="col col-qty align-center">Количество</div>
+                    <div class="col"></div>
+                </div>
+
+                <div class="tf">
+                    <div class="row layout-inline">
+                        <div class="col">
+                            <p>Итого</p>
+                        </div>
+                        <div class="col total-price"></div>
+                    </div>
+                </div>
+            <a href="#" class="btn btn-update" onclick="clearBasket()">Очистить</a>
+            </div>
+            <a href="#" class="btn btn-next" onclick="displayNext(this)">Далее</a>
+        </div>
+        <div class="address">
+            <div class="table">
+                <div class="row th">
+                    <div class="col col-pro">Адрес Доставки</div>
+                </div>
+                <div class="address-form">
+                    <input class="form-control" id="autocomplete" placeholder="Улица и номер дома">
+                    <input class="form-control" id="inputCity" placeholder="Город">
+                    <input class="form-control" id="inputZip" placeholder="Индекс">
+                    <input class="form-control" id="inputCountry" placeholder="Страна">
+                </div>
+            </div>
+            <a href="#" class="btn btn-next" onclick="displayNext(this)">Далее</a>
+        </div>
+        <div class="comments">
+            <div class="table">
+                <div class="row th">
+                    <div class="col col-pro">Комментарий</div>
+
+                </div>
+                <div class="comment"><textarea></textarea></div>
+                <a href="#" class="btn btn-update">Оформить Заказ</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
