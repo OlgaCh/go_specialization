@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>Lesson 4 - Task 2</title>
+</head>
+
+<body>
+    <script>
+        // Перенести функционал подсчета корзины на объектно-ориентированную базу.
+        "use strict";
+
+        class Product {
+            constructor (name, price){
+                this.name = name;
+                this.price = price;
+            }
+        }
+
+        class BasketItem extends Product {
+            constructor (name, price, quantity){
+                super(name, price);
+                this.quantity = quantity;
+            }
+        }
+
+        class Basket {
+            constructor (items) {
+                this.items = items;
+            }
+            countPrice() {
+                return this.items.reduce((total, unit) => total + unit.quantity * unit.price, 0);
+            }
+        }
+
+        let bi_1 = new BasketItem("Linking Park. Aug 2021 Show", 1500, 5);
+        let bi_2 = new BasketItem("Skillet. 2021 in Moscow", 999, 3);
+        let bi_3 = new BasketItem("АнимациЯ. Возвращение в Воронеж", 750, 2);
+
+        let basket = new Basket([bi_1, bi_2, bi_3]);
+        let basketPrice = basket.countPrice();
+
+        console.log(`Стоимость корзины: ${basketPrice} рублей.`);
+        console.log("В корзине:");
+        basket.items.forEach(item => console.log(`${item.name} - ${item.quantity} шт`));
+    </script>
+</body>
+
+</html>
