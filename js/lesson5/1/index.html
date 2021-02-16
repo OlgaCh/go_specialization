@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5 - Task 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="chessboard">
+    </div>
+    <script>
+        /*
+            Создать функцию, генерирующую шахматную доску. Можно использовать любые html-теги. Доска должна быть
+            верно разлинована на черные и белые ячейки. Строки должны нумероваться числами от 1 до 8, столбцы —
+            латинскими буквами A, B, C, D, E, F, G, H.
+        */
+        "use strict";
+
+        <!-- Board  -->
+
+        let boardHTML = "";
+        for (let i = 0; i < 9; i++){
+            if (i == 0) {
+                boardHTML += ["", "A", "B", "C", "D", "E", "F", "G", "H"].
+                reduce((header, l) => header + `<div class="white">${l}</div>`, "");
+            } else {
+               boardHTML += `<div class="white">${9-i}</div>`;
+                if (i % 2 != 0) {
+                    boardHTML += `<div class="white row${i}"></div><div class="black row${i}"></div>`.repeat(4);
+                } else {
+                    boardHTML += `<div class="black row${i}"></div><div class="white row${i}"></div>`.repeat(4);
+                }
+            }
+        };
+        document.getElementById("chessboard").innerHTML = boardHTML;
+
+        <!-- Figures  -->
+        const incr = [0, 2, 1, -1, -2, 1, 2, 0];
+        const row1Base = 9820;
+        const row1 = document.getElementsByClassName("row1");
+        const row2 = document.getElementsByClassName("row2");
+        const row7 = document.getElementsByClassName("row7");
+        const row8Base = 9814;
+        const row8 = document.getElementsByClassName("row8");
+
+        for (let i = 0; i < row1.length; i++){
+            row1[i].innerHTML = `<div>&#${row1Base+incr[i]};</div>`;
+            row2[i].innerHTML = "<div>&#9823;</div>";
+            row7[i].innerHTML = "<div>&#9817;</div>";
+            row8[i].innerHTML = `<div>&#${row8Base+incr[i]};</div>`;
+        }
+    </script>
+</body>
+
+</html>
